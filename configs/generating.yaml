@@ -21,19 +21,19 @@ task:
     train:
       class: ShapePretrainingDatasetShard
       path: ---TRAINING DATA PATH---
-      vocab_path: ---VOCAB PATH---
+      vocab_path: "/home/sk851/misc/mol_gen/frag_db/desert/vocab.pkl"
       sample_each_shard: 500000
       shuffle: True
     valid:
       class: ShapePretrainingDatasetPocket
       path: 
         samples: ---VALID DATA PATH---
-        vocab: ---VOCAB PATH---
+        vocab: "/home/sk851/misc/mol_gen/frag_db/desert/vocab.pkl"
     test:
       class: ShapePretrainingDatasetPocket
       path: 
         samples: ---TEST DATA PATH---
-        vocab: ---VOCAB PATH---
+        vocab: "/home/sk851/misc/mol_gen/frag_db/desert/vocab.pkl"
   
   dataloader:
     train:

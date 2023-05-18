@@ -369,7 +369,7 @@ def rotation_matrix(axis, theta):
     if not isinstance(axis, (np.ndarray, list, tuple)):
         raise TypeError('axis must be an array of floats of shape (3,)')
     try:
-        axis = np.asarray(axis, dtype=np.float)
+        axis = np.asarray(axis, dtype=np.float64)
     except ValueError:
         raise ValueError('axis must be an array of floats of shape (3,)')
 
@@ -491,7 +491,7 @@ def make_grid(coords, features, grid_resolution=1.0, max_dist=10.0):
     """
 
     try:
-        coords = np.asarray(coords, dtype=np.float)
+        coords = np.asarray(coords, dtype=np.float64)
     except ValueError:
         raise ValueError('coords must be an array of floats of shape (N, 3)')
     c_shape = coords.shape
@@ -500,7 +500,7 @@ def make_grid(coords, features, grid_resolution=1.0, max_dist=10.0):
 
     N = len(coords)
     try:
-        features = np.asarray(features, dtype=np.float)
+        features = np.asarray(features, dtype=np.float64)
     except ValueError:
         raise ValueError('features must be an array of floats of shape (N, F)')
     f_shape = features.shape

@@ -3,10 +3,10 @@ bycha-run \
     --lib shape_pretraining \
     --task.mode evaluate \
     --task.data.train.path data \
-    --task.data.valid.path.samples ❗❗❗FILL_THIS(MOLECULE SHAPES SAMPLED FROM CAVITY)❗❗❗ \
-    --task.data.test.path.samples  ❗❗❗FILL_THIS❗❗❗ \
+    --task.data.valid.path.samples "/home/sk851/mol_gen/mol_gen/data_pipeline/data/bms/cavity/cavity.pdb" \
+    --task.data.test.path.samples  "/home/sk851/mol_gen/mol_gen/data_pipeline/data/bms/cavity/cavity.pdb" \
     --task.dataloader.train.max_samples 1 \
     --task.dataloader.valid.sampler.max_samples 1 \
     --task.dataloader.test.sampler.max_samples 1 \
-    --task.model.path ❗❗❗FILL_THIS❗❗❗ \
-    --task.evaluator.save_hypo_dir ❗❗❗FILL_THIS❗❗❗
+    --task.model.path "/home/sk851/pretrained_desert.pt" \
+    --task.evaluator.save_hypo_dir "/home/sk851/output"
